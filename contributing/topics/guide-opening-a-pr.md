@@ -45,8 +45,8 @@ In general, Pull Requests which add/change either code or SDK's go through the f
 
 * Don't send the PR from your `main` branch.
 * The PR Title is obvious/clear about what it's changing (see `Title` below).
-* The PR Body contains a summary of what/why is included (see `Body` below).
-* any linked Issues
+* The PR Body contains a summary of what/why is included (see `Description` below).
+* any linked Issues (see `Description` below)
 
 ### Title
 
@@ -77,8 +77,8 @@ Examples of poorly written PR titles:
 
 A PR should include a brief description of the reason for the PR, what it is doing, what it is trying to accomplish, and anything relevant for a reviewer to know. It also helps to paste the output from running the accpetance tests.
 
-It should also link to any related issues/PRs and include the following for any issues that it will resolve:
+It should also link to any related issues/PRs and include the following for any issues that it will resolve by using [the keywords](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword) "fixes", "closes", "resolves", etc:
 
  ```
- fixes #1234,#5678
+ fixes #1234, fixes #5678, fixes #9101
  ```
