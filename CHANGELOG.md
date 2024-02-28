@@ -1,24 +1,43 @@
 ## 3.94.0 (Unreleased)
 
+FEATURES:
+
+* **New Resource**: `azurerm_kubernetes_fleet_update_run` [GH-24813]
+
 ENHANCEMENTS:
 
-* dependencies `springcloud`: updating to API Version `2024-01-01-preview` [GH-24937]
-* dependencies: updating to `v0.20240222.1164640` of `github.com/hashicorp/go-azure-sdk` [GH-25002]
+* dependencies: updating to `v0.20240227.1172434` of `github.com/hashicorp/go-azure-sdk` [GH-25055]
 * `servicefabric`: updating to use the transport layer from `hashicorp/go-azure-sdk` rather than `Azure/go-autorest` [GH-25002]
+* `springcloud`: updating to API Version `2024-01-01-preview` [GH-24937]
 * Data Source: `azurerm_storage_table_entities` - support for `select` [GH-24987]
-* `azurerm_spring_cloud_gateway` - support for the `application_performance_monitoring_ids` property [GH-24919]
+* Data Source: `azurerm_netapp_volume` - support for the `smb_access_based_enumeration` and `smb_non_browsable` properties [GH-24514]
+* `azurerm_cosmosdb_account` - add support for `minimal_tls_version` [GH-24966]
+* `azurerm_federated_identity_credential` - the federated credentials can now be changed without creating a new resource [GH-25003]
+* `azurerm_mssql_database` - support for the `recovery_point_id` and `restore_long_term_retention_backup_id` properties [GH-24904]
+* `azurerm_linux_virtual_machine` - support for the `automatic_upgrade_enabled`, `disk_controller_type`, `os_image_notification`, `treat_failure_as_deployment_failure_enabled`, and `vm_agent_platform_updates_enabled`properties [GH-23394]
 * `azurerm_nginx_deployment` - support for the `automatic_upgrade_channel` property [GH-24867]
+* `azurerm_netapp_volume` - support for the `smb_access_based_enumeration` and `smb_non_browsable` properties [GH-24514]
+* `azurerm_netapp_pool` - support for the `encryption_type` property [GH-24993]
 * `azurerm_role_definition` - upgrade to the API version `2022-05-01-preview` [GH-25008]
 * `azurerm_redis_cache` - allow AAD auth for all SKUs [GH-25006]
+* `azurerm_spring_cloud_gateway` - support for the `application_performance_monitoring_ids` property [GH-24919]
 * `azurerm_spring_cloud_configuration_service` - support for the `refresh_interval_in_seconds` property [GH-25009]
+* `azurerm_synapse_workspace` - add support for `user_assigned_identity_id` within `customer_managed_key` [GH-25027]
+* `azurerm_windows_virtual_machine` - support for the `automatic_upgrade_enabled`, `disk_controller_type`, `os_image_notification`, `treat_failure_as_deployment_failure_enabled`, and `vm_agent_platform_updates_enabled`properties [GH-23394]
 
 BUG FIXES:
 
+* `azurerm_api_management_notification_recipient_email` - fixing an issue where response pages weren't iterated over correctly [GH-25055]
+* `azurerm_api_management_notification_recipient_user` - fixing an issue where response pages weren't iterated over correctly [GH-25055]
 * `azurerm_batch_pool` - fix setting the `extension.settings_json` property [GH-24976]
+* `azurerm_key_vault_key` - `expiration_date` can be updated if newer date is ahead [GH-25000]
 * `azurerm_recovery_services_vault` - validate that `use_system_assigned_identity` and `user_assigned_identity_id` cannot be set at the same time [GH-24091]
 * `azurerm_recovery_vaults` will now create properly with `SystemAssigned,UserAssigned` identity [GH-24978]
+* `azurerm_subscription` - fixing an issue where response pages weren't iterated over correctly [GH-25055]
 
 ## 3.93.0 (February 22, 2024)
+
+FEATURES:
 
 * **New Data Source**: `azurerm_express_route_circuit_peering` ([#24971](https://github.com/hashicorp/terraform-provider-azurerm/issues/24971))
 * **New Data Source**: `azurerm_storage_table_entities` ([#24973](https://github.com/hashicorp/terraform-provider-azurerm/issues/24973))
